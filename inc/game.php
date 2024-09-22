@@ -24,6 +24,7 @@
 
                      <?php for($col = 0; $col <=2; $col++) : ?>
 
+                <a href="">
                     <div class="board-cell text-center">
                        <?php if($_SESSION['game_board'][$row][$col] == 'X') : ?>
                             <img src="assets/img/times.png">
@@ -31,6 +32,7 @@
                           <img src="assets/img/circle.png">
                        <?php endif; ?>
                     </div>
+                </a>
 
                 <?php endfor; ?>
                 </div>
