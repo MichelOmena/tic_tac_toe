@@ -2,7 +2,19 @@
  defined('CONTROL') or die('Acesso negativo');
 
  if(isset($_GET['player']) && isset($_GET['x']) && isset($_GET['y'])){
-    
+
+    $player = $_GET['player'];
+    $x = $_GET['x'];
+    $y = $_GET['y'];
+
+    //check if there is already a simbol in the call
+    if(empty($_SESSION['game_board'][$x][$y])){
+
+        //defines the symbol of the player
+        $_SESSION['game_board'][$x][$y] = $player == 1 ? 'X' : 'O';
+        
+    }
+
  }
  ?>
 <div class="container mt-5">
