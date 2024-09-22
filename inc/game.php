@@ -1,6 +1,10 @@
-<?php defined('CONTROL') or die('Acesso negativo') ?>
+<?php
+ defined('CONTROL') or die('Acesso negativo');
 
-
+ if(isset($_GET['player']) && isset($_GET['x']) && isset($_GET['y'])){
+    
+ }
+ ?>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col">
@@ -24,7 +28,7 @@
 
                      <?php for($col = 0; $col <=2; $col++) : ?>
 
-                <a href="">
+                <a href="index.php?route=game&player=<?= $_SESSION['active_player'] ?>&x=<?= $col ?>&y=<?= $row ?>">
                     <div class="board-cell text-center">
                        <?php if($_SESSION['game_board'][$row][$col] == 'X') : ?>
                             <img src="assets/img/times.png">
