@@ -146,7 +146,6 @@
             <?php if(!empty($winner)) : ?>
                 <div class="text-center mt-5">
                     <h3 class="text-center text-warning"><?= $winner ?></h3>
-                    <div class="text-center mt-5">
                         <a href="index.php?route=game&next=1" class="btn btn-success w-25">NEXT MATCH GAME</a>
                     </div>
                 </div>
@@ -159,3 +158,7 @@
         </div>
     </div>
 </div>
+
+<!-- Fazer um pop up com animação ao vencedor -->
+<!-- ao ganhar a partida reinicie o jogo invés de continuar a marcar a matrix-->
+ 
