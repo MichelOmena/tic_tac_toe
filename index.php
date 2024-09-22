@@ -7,7 +7,7 @@ session_start();
 define('CONTROL', true);
 
 //define routes
-$routes = $_GET['route'] ?? 'start';
+$route = $_GET['route'] ?? 'start';
 
 $script = null;
 
@@ -17,10 +17,9 @@ switch ($route) {
         break;
     case 'game':
         $script = 'game.php';
+        break;
     case 'end':
         $script = 'end.php';
-    case 'game':
-        $script = 'game.php';
         break;
     default:
     $script = '404.php';
@@ -28,6 +27,6 @@ switch ($route) {
 }
 
 //view
-require "in/header.php";
+require "inc/header.php";
 require "inc/$script";
 require "inc/footer.php";
