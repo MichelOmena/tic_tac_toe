@@ -16,6 +16,32 @@
                     <h3 class="text-center text-white"><?= $_SESSION['player_2_score'] ?></h3>
                 </div>
             </div>
+            <hr class="text-white">
+
+            <?php for($row = 0; $row <=2; $row++) : ?>
+
+                <div class="d-flex justify-content-center">
+
+                     <?php for($col = 0; $col <=2; $col++) : ?>
+
+                    <div class="board-cell text-center">
+                       <?php if($_SESSION['game_board'][$row][$col] == 'X') : ?>
+                            <img src="assets/img/times.png">
+                       <?php elseif($_SESSION['game_board'][$row][$col] == 'O') : ?>
+                          <img src="assets/img/circle.png">
+                       <?php endif; ?>
+                    </div>
+
+                <?php endfor; ?>
+                </div>
+            <?php endfor; ?>
+
         </div>
     </div>
 </div>
+
+<!--
+    |-|-|-|
+    |-|-|-|
+    |-|-|-|
+-->

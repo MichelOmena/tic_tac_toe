@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'player_2_score' => 0,
 
         'game_board' => [
-            ['','',''],
-            ['','',''],
-            ['','','']
+            ['X','',''],
+            ['','X',''],
+            ['','','X']
         ],
         'game_turn' => 1, 
         'game_number' => 1,
