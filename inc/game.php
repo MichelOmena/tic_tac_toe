@@ -12,7 +12,11 @@
 
         //defines the symbol of the player
         $_SESSION['game_board'][$x][$y] = $player == 1 ? 'X' : 'O';
-        
+
+
+        //change the active player
+        $_SESSION['active_player'] = $player == 1 ? 2 : 1;
+
     }
 
  }
@@ -40,7 +44,7 @@
 
                      <?php for($col = 0; $col <=2; $col++) : ?>
 
-                <a href="index.php?route=game&player=<?= $_SESSION['active_player'] ?>&x=<?= $col ?>&y=<?= $row ?>">
+                <a href="index.php?route=game&player=<?= $_SESSION['active_player'] ?>&x=<?= $row ?>&y=<?= $col ?>">
                     <div class="board-cell text-center">
                        <?php if($_SESSION['game_board'][$row][$col] == 'X') : ?>
                             <img src="assets/img/times.png">
@@ -53,6 +57,10 @@
                 <?php endfor; ?>
                 </div>
             <?php endfor; ?>
+
+            <div class="text-center mt-5">
+                <a href="index.php?route=start" class="btn btn-dark w-25">RESTART</a>
+            </div>
 
         </div>
     </div>
